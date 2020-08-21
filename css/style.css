@@ -150,6 +150,17 @@ justify-content: flex-start;
     padding: 1rem;
 }
 
+.copyright {
+    font-size: 145%;
+    line-height: 3.1rem;
+    font-family: 'Montserrat',
+    sans-serif;
+    padding: 1rem;
+    text-align: center;
+    padding: 10px;
+    color: white
+}
+
 
 /* Responsive */
 
