@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200;0,600;0,900;1,400&family=Lora:ital,wght@0,400;1,600;1,700&family=Montserrat:wght@200;400;600;900&display=swap');
+
+/*     font-family: 'Crimson Pro', serif;
+
+    font-family: 'Lora', serif;
+
+    font-family: 'Montserrat', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 65%;
+}
+
+body {
+    background-color: #000000;
+    color: #eee;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 3rem;
+}
+
+.navbar__logo {
+    display: inline-block;
+    border: 2px solid #eee;
+    padding: 1rem;
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+    font-family: 'Crimson Pro',
+        serif;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.navbar__menu li {
+    display: inline-block;
+    font-family: 'Montserrat',
+        sans-serif;
+}
+
+.navbar__menu li:nth-child(1) {
+    font-weight: bold;
+}
+
+.navbar__menu a {
+    text-decoration: none;
+    color: #eee;
+    margin-left: 4rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Montserrat';
+    margin-left: 7rem;
+}
+
+
+.hero__content a {
+    display: inline-block;
+    margin-top: 2.5rem;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: #eee;
+}
+
+.hero__content-title {
+    margin-top: 8rem;
+    font-family: 'Lora', serif;
+    font-size: 6rem;
+    font-weight: 600;
+}
+
+.hero__content-text {
+    margin-top: 3.6rem;
+    padding: 0 0.8rem;
+    font-size: 2.3rem;
+}
+
+.hero__content-image {
+    margin-top: 5.5rem;
+    padding: 4rem;
+    width: 60%;
+    position: relative;
+
+     }
+
+
+.hero__content-image img {
+    width: 100%;
+    margin: auto;
+}
+
+.hero__card {
+width: 44%;
+height: 18%;
+background-color: #000000;
+font-family: 'Montserrat',
+sans-serif;
+position: absolute;
+top:74%;
+left: 40%;
+box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+
+
+.hero__author-content{
+display: flex;
+justify-content: flex-start;
+
+}
+
+.hero__author-content-name {
+    margin: 1rem;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+}
+
+.hero__author-content-name p {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: #828282
+}
+
+.hero__author-content-image img {
+    border-radius: 50rem;
+    height: 5.5rem;
+    display: inline-block;
+    padding: 1rem;
+}
+
+.description {
+    /* font-size: 2rem; */
+    font-size: 145%;
+    line-height: 3.1rem;
+    font-family: 'Lora',
+    sans-serif;
+    padding: 1rem;
+}
+
+
+/* Responsive */
+
+@media screen and (min-width: 1299px) {
+    .hero__card {
+        width: 48%;
+        height: 14%;
+        position: absolute;
+        top: 82%;
+        left: 38%;
+    }
+}
+
+
+@media screen and (max-width: 1099px) {
+    
+    
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        font-family: 'Montserrat';
+        margin-left: 7rem;
+    }
+
+    .hero__content-image {
+        margin-top: 5.5rem;
+        padding: 4rem;
+        width: 100%;
+        position: relative;
+
+    }
+ 
+ .hero__card {
+     width: 32%;
+     height: 16%;
+     position: absolute;
+     top: 80%;
+     left: 40%;
+ }
+
+ .description {
+     /* font-size: 185%; */
+     line-height: 3.1rem;
+     font-family: 'Lora',
+         sans-serif;
+     padding: 1rem;
+ }
+    }
+@media screen and (max-width: 700px) {
+   
+    .hero__card {
+        width: 52%;
+        height: 24%;
+        position: absolute;
+        top: 80%;
+        left: 40%;
+    }
+
+    @media screen and (max-width: 614px) {
+
+        .hero__card {
+            width: 78%;
+            height: 34%;
+            position: absolute;
+            top: 80%;
+            left: 11%;
+        }
+        /* Hamburger */
+        .menu {
+            position: fixed;
+            top: 75px;
+            left: 0;
+            display: none;
+            padding: 100px -20px;
+            text-align: center;
+            width: 100%;
+            height: 100vh;
+            background: black;
+            z-index: 999;
+            border-top: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        .menu.active {
+            display: block;
+        }
+
+        .menu.active li {
+            width: 100%;
+            margin: auto;
+            margin-top: 8rem;
+
+        }
+
+        .menu li a {
+            color: var(--white);
+            font-size: 2.5rem;
+
+        }
+
+        .toggle {
+            width: 25px;
+            height: 25px;
+            margin: 10px 0px 10px 60px;
+            background: url('/css/img/menu.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 30px;
+            cursor: pointer;
+        }
+
+        .toggle.active { 
+            width: 25px;
+            height: 25px;
+            margin: 10px 0px 10px 60px;
+            background: url('/css/img/close.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 20px;
+            cursor: pointer;
+
+        }
+
+        /* Hamburger ends */
+
+}
+}
